@@ -1,22 +1,56 @@
-.App {
+:root {
+  --nav-height: 10vh;
+  --theme-primary: rgba(8.2, 93.3, 60, 0.2);
+  --theme-secondary: rgba(33.7, 51, 43.1, 0.2);
+  --theme-tertiary: #333232;
+}
+
+.container {
   text-align: center;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
+.site-logo {
+  height: var(--nav-height);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.site-header {
+  background-color: var(--theme-tertiary);
+  min-height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 100vw;
 }
 
-.App-link {
-  color: #09d3ac;
+.header-text, .subheader-text {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.header-text {
+  font-size: 2.4rem;
+}
+.subheader-text {
+  font-size: 1.4rem;
+}
+
+/* Navbar CSS */
+
+.navbar.navbar-dark.navbar-expand-lg {
+  background-image: url("./nabar-link-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: var(--nav-height);
+}
+
+.navbar-link {
+  border: 1px solid var(--theme-primary);
+  border-radius: 30%;
+  background-image: linear-gradient(to right, var(--theme-primary), var(--theme-secondary));
+  font-family: 'Source Sans Pro', sans-serif;
 }
